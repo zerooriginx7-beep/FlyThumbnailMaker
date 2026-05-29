@@ -1,0 +1,28 @@
+apply plugin: "com.android.application"
+
+android {
+    compileSdkVersion 34
+    namespace "com.flythumbnailmaker"
+
+    defaultConfig {
+        applicationId "com.flythumbnailmaker"
+        minSdkVersion 21
+        targetSdkVersion 34
+        versionCode 1
+        versionName "1.0"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+        }
+        debug {
+            applicationIdSuffix ".debug"
+        }
+    }
+}
+
+dependencies {
+    implementation "com.facebook.react:react-android"
+    implementation "com.facebook.react:hermes-android"
+}
